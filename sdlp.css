@@ -1,0 +1,189 @@
+/* ============================================================
+   SDLP — post de rol · Jade Circle
+   by Kelvin · https://treeofliferpg.net/u2246
+   ============================================================ */
+
+/* ── VARIABLES (pegar en el bloque <style> del HTML) ──
+:root {
+  --bg2: #1e1e1e;
+  --bg3: #242424;
+  --bd:  #3a3a3a;
+  --tx:  #e8e6e2;
+  --tx2: #a3a09a;
+  --ac:  #6B8E6B;
+}
+body.light-mode .sdlp {
+  --bg2: #f5f4f0;
+  --bg3: #ece9e2;
+  --bd:  #ccc8be;
+  --tx:  #1e1c18;
+  --tx2: #6a6660;
+  --ac:  #4d7a4d;
+}
+*/
+
+/* ── WRAPPER ── */
+.sdlp {
+  width: 550px;
+  margin: 0 auto;
+  background: var(--bg2);
+  border-top: 2px solid var(--ac);
+  border-bottom: 2px solid var(--ac);
+  border-left: 1px solid var(--bd);
+  border-right: 1px solid var(--bd);
+  font-family: 'DM Sans', sans-serif;
+  color: var(--tx);
+  overflow: hidden;
+}
+
+/* ── CABECERA ── */
+.sdlp-head {
+  padding: 36px 32px 28px;
+  text-align: center;
+  border-bottom: 1px solid var(--bd);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.sdlp-pat {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22190%22%20height=%22190%22%3E%20%3Cline%20x1=%228%22%20y1=%2220%22%20x2=%2238%22%20y2=%226%22%20stroke=%22rgba%28107,142,107,0.20%29%22%20stroke-width=%22.6%22/%3E%20%3Cline%20x1=%2238%22%20y1=%226%22%20x2=%2252%22%20y2=%2234%22%20stroke=%22rgba%28107,142,107,0.16%29%22%20stroke-width=%22.6%22/%3E%20%3Cline%20x1=%2270%22%20y1=%2260%22%20x2=%2252%22%20y2=%2234%22%20stroke=%22rgba%28107,142,107,0.14%29%22%20stroke-width=%22.5%22/%3E%20%3Cline%20x1=%2270%22%20y1=%2260%22%20x2=%22108%22%20y2=%2248%22%20stroke=%22rgba%28107,142,107,0.18%29%22%20stroke-width=%22.6%22/%3E%20%3Cline%20x1=%22108%22%20y1=%2248%22%20x2=%22140%22%20y2=%2220%22%20stroke=%22rgba%28107,142,107,0.15%29%22%20stroke-width=%22.5%22/%3E%20%3Cline%20x1=%22140%22%20y1=%2220%22%20x2=%22165%22%20y2=%2238%22%20stroke=%22rgba%28107,142,107,0.2%29%22%20stroke-width=%22.6%22/%3E%20%3Cline%20x1=%2230%22%20y1=%2295%22%20x2=%228%22%20y2=%22120%22%20stroke=%22rgba%28107,142,107,0.15%29%22%20stroke-width=%22.5%22/%3E%20%3Ccircle%20cx=%228%22%20cy=%2220%22%20r=%221.5%22%20fill=%22rgba%28107,142,107,0.55%29%22/%3E%20%3Ccircle%20cx=%2238%22%20cy=%226%22%20r=%221%22%20fill=%22rgba%28107,142,107,0.45%29%22/%3E%20%3Ccircle%20cx=%2252%22%20cy=%2234%22%20r=%221.7%22%20fill=%22rgba%28107,142,107,0.5%29%22/%3E%20%3Ccircle%20cx=%2270%22%20cy=%2260%22%20r=%221.1%22%20fill=%22rgba%28107,142,107,0.4%29%22/%3E%20%3Ccircle%20cx=%22108%22%20cy=%2248%22%20r=%221.4%22%20fill=%22rgba%28107,142,107,0.5%29%22/%3E%20%3Ccircle%20cx=%22140%22%20cy=%2220%22%20r=%221.8%22%20fill=%22rgba%28107,142,107,0.55%29%22/%3E%20%3Ccircle%20cx=%22165%22%20cy=%2238%22%20r=%221%22%20fill=%22rgba%28107,142,107,0.4%29%22/%3E%20%3Ccircle%20cx=%2230%22%20cy=%2295%22%20r=%221.3%22%20fill=%22rgba%28107,142,107,0.45%29%22/%3E%20%3C/svg%3E");
+  background-size: 190px 190px;
+  opacity: .5;
+}
+.sdlp-head::before,
+.sdlp-head::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 180px; height: 180px;
+  border: 1px solid var(--ac);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(.5);
+  opacity: .15;
+  animation: sdlp-ripple 4s ease-out infinite;
+}
+.sdlp-head::after { animation-delay: 2s; }
+@keyframes sdlp-ripple {
+  0%   { transform: translate(-50%, -50%) scale(.5);  opacity: .18; }
+  100% { transform: translate(-50%, -50%) scale(1.3); opacity: 0; }
+}
+
+/* imagen */
+.sdlp-img {
+  width: 100px; height: 100px;
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid var(--bd);
+  position: relative;
+  z-index: 1;
+}
+.sdlp-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(85%) contrast(1.1) brightness(.8);
+  display: block;
+}
+
+/* kicker */
+.sdlp-kicker {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--ac);
+  position: relative;
+  z-index: 1;
+}
+
+/* ornamento */
+.sdlp-orn { display: flex; align-items: center; justify-content: center; gap: 8px; width: 180px; position: relative; z-index: 1; }
+.sdlp-orn i { flex: 1; height: 1px; background: var(--ac); opacity: .5; }
+.sdlp-orn b { width: 5px; height: 5px; border-radius: 50%; background: var(--ac); display: block; }
+
+/* título */
+.sdlp-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  font-size: 26px;
+  letter-spacing: -.3px;
+  text-transform: uppercase;
+  color: var(--tx);
+  position: relative;
+  z-index: 1;
+  line-height: 1.1;
+}
+
+/* datos */
+.sdlp-datos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+.sdlp-dato {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--tx2);
+  opacity: 0.7;
+  padding: 0 10px;
+}
+.sdlp-dato:not(:last-child)::after { content: '·'; margin-left: 18px; color: var(--bd); }
+
+/* ── TEXTO ── */
+.sdlp-body {
+  padding: 26px 32px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px;
+  line-height: 1.9;
+  color: var(--tx);
+  font-weight: 300;
+  text-align: justify;
+}
+.sdlp-body p { margin-bottom: 10px; }
+.sdlp-body p:last-child { margin-bottom: 0; }
+.sdlp-body b,
+.sdlp-body strong { color: var(--ac); font-weight: 600; }
+.sdlp-body i,
+.sdlp-body em { color: var(--ac); font-style: italic; }
+.sdlp-body u { text-decoration: underline; text-decoration-color: var(--ac); text-underline-offset: 3px; }
+.sdlp-body s { color: var(--tx2); text-decoration: line-through; }
+/* cobertura BBCode Foroactivo */
+.sdlp-body span[style*="bold"] { color: var(--ac); font-weight: 600; }
+.sdlp-body span[style*="700"]  { color: var(--ac); font-weight: 600; }
+
+/* ── CRÉDITOS ── */
+.sdlp-cred {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 32px;
+  border-top: 1px solid var(--bd);
+}
+.sdlp-cred-nombre {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: .3px;
+  color: var(--tx2);
+}
+.sdlp-cred-link,
+.sdlp-cred-link:link,
+.sdlp-cred-link:visited {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ac) !important;
+  text-decoration: none;
+  font-weight: 600;
+}
