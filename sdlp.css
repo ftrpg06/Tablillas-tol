@@ -59,7 +59,7 @@
   width: 100px; height: 100px;
   border-radius: 2px;
   overflow: hidden;
-  border: 1px solid var(--bd);
+  border: 2px solid var(--bd);
   position: relative;
   z-index: 1;
 }
