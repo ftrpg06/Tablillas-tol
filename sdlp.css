@@ -1,26 +1,6 @@
 /* ============================================================
-   SDLP — post de rol · Jade Circle
-   by Kelvin · https://treeofliferpg.net/u2246
+   SDLP 
    ============================================================ */
-
-/* ── VARIABLES (pegar en el bloque <style> del HTML) ──
-:root {
-  --bg2: #1e1e1e;
-  --bg3: #242424;
-  --bd:  #3a3a3a;
-  --tx:  #e8e6e2;
-  --tx2: #a3a09a;
-  --ac:  #6B8E6B;
-}
-body.light-mode .sdlp {
-  --bg2: #f5f4f0;
-  --bg3: #ece9e2;
-  --bd:  #ccc8be;
-  --tx:  #1e1c18;
-  --tx2: #6a6660;
-  --ac:  #4d7a4d;
-}
-*/
 
 /* ── WRAPPER ── */
 .sdlp {
