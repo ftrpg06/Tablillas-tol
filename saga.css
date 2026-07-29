@@ -1,0 +1,499 @@
+
+/* ======== FUENTES ======== */
+
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single&family=Space+Grotesk:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+
+/* ======== GENERAL ======== */
+
+.saga-frame {
+    width: 750px;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;
+    overflow: hidden;
+    font-family: 'Space Grotesk', sans-serif;
+    background: var(--saga-bg-dark);
+    color: var(--saga-text-dark);
+}
+
+body.light-mode .saga-frame {
+    background: var(--saga-bg-light);
+    color: var(--saga-text-light);
+}
+
+
+/* ======== PESTAÑAS ======== */
+
+.saga-tabstrip {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    padding: 6px 12px 0;
+}
+
+.saga-main-tab {
+    background: linear-gradient(90deg, var(--saga-accent1-dark), var(--saga-accent2-dark));
+}
+
+body.light-mode .saga-main-tab {
+    background: linear-gradient(90deg, var(--saga-accent1-light), var(--saga-accent2-light));
+}
+
+.saga-char > .saga-tabstrip {
+    background: linear-gradient(90deg, var(--saga-accent1-dark), var(--saga-accent2-dark));
+}
+
+body.light-mode .saga-char > .saga-tabstrip {
+    background: linear-gradient(90deg, var(--saga-accent1-light), var(--saga-accent2-light));
+}
+
+.saga-tab {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 6px 6px 0 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: .5px;
+    background: var(--saga-tab-dark);
+    color: var(--saga-tb-icon-dark);
+}
+
+body.light-mode .saga-tab {
+    background: var(--saga-tab-light);
+    color: var(--saga-tb-icon-light);
+}
+
+.saga-tb-icons {
+    margin-left: auto;
+    display: flex;
+    gap: 8px;
+    align-self: center;
+    padding-right: 8px;
+    padding-bottom: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    opacity: .85;
+    color: var(--saga-tb-icon-dark);
+}
+
+body.light-mode .saga-tb-icons {
+    color: var(--saga-tb-icon-light);
+}
+
+.saga-tb-icons.small {
+    font-size: 9px;
+    gap: 6px;
+}
+
+
+/* ======== CABECERA ======== */
+
+.saga-head {
+    text-align: center;
+    padding: 48px 24px 30px;
+}
+
+.saga-icon {
+    color: var(--saga-icon-dark);
+}
+
+body.light-mode .saga-icon {
+    color: var(--saga-icon-light);
+}
+
+.saga-title {
+    display: inline-block;
+    font-family: 'Bitcount Grid Single', sans-serif;
+    font-size: 38px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 18px 0 0;
+    transition: transform .15s;
+    color: var(--saga-title-dark);
+}
+
+body.light-mode .saga-title {
+    color: var(--saga-title-light);
+}
+
+.saga-title:hover {
+    animation: saga-title-pulse .8s ease-in-out infinite;
+}
+
+.saga-sub {
+    display: block;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin: 2px 0 16px;
+    color: var(--saga-sub-dark);
+}
+
+body.light-mode .saga-sub {
+    color: var(--saga-sub-light);
+}
+
+.saga-meta {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.saga-meta-tag {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform .15s;
+    background: linear-gradient(90deg, var(--saga-accent1-dark), var(--saga-accent2-dark));
+    color: var(--saga-meta-text-dark);
+}
+
+body.light-mode .saga-meta-tag {
+    background: linear-gradient(90deg, var(--saga-accent1-light), var(--saga-accent2-light));
+    color: var(--saga-meta-text-light);
+}
+
+.saga-meta-tag:hover {
+    animation: saga-chap-pulse .8s ease-out infinite;
+}
+
+
+/* ======== RESUMEN ======== */
+
+.saga-summary {
+    padding: 0 60px 26px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12.5px;
+    line-height: 1.75;
+    letter-spacing: .1px;
+    text-align: justify;
+    color: var(--saga-text-dark);
+}
+
+body.light-mode .saga-summary {
+    color: var(--saga-text-light);
+}
+
+.saga-summary strong,
+.saga-summary em {
+    color: var(--saga-accent1-dark);
+}
+
+body.light-mode .saga-summary strong,
+body.light-mode .saga-summary em {
+    color: var(--saga-accent1-light);
+}
+
+
+/* ======== PERSONAJES ======== */
+
+.saga-chars {
+    padding: 0 30px 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.saga-char {
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--saga-surface-dark);
+    border: 1px solid var(--saga-border-dark);
+}
+
+body.light-mode .saga-char {
+    background: var(--saga-surface-light);
+    border-color: var(--saga-border-light);
+}
+
+.saga-toolbar {
+    padding: 6px 14px;
+    background: var(--saga-toolbar-dark);
+}
+
+body.light-mode .saga-toolbar {
+    background: var(--saga-toolbar-light);
+}
+
+.saga-rank {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: var(--saga-rank-bg-dark);
+    color: var(--saga-rank-text-dark);
+}
+
+body.light-mode .saga-rank {
+    background: var(--saga-rank-bg-light);
+    color: var(--saga-rank-text-light);
+}
+
+.saga-rank.empty {
+    background: transparent;
+    border: 1px dashed var(--saga-rank-dash-dark);
+    color: var(--saga-rank-empty-dark);
+}
+
+body.light-mode .saga-rank.empty {
+    border-color: var(--saga-rank-dash-light);
+    color: var(--saga-rank-empty-light);
+}
+
+.saga-char-body {
+    display: flex;
+    gap: 14px;
+    padding: 14px;
+    align-items: center;
+}
+
+.saga-char-photo-wrap {
+    position: relative;
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+}
+
+.saga-char-photo-wrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    opacity: 0;
+    background: var(--saga-accent1-dark);
+}
+
+body.light-mode .saga-char-photo-wrap::after {
+    background: var(--saga-accent1-light);
+}
+
+.saga-char-photo-wrap:hover::after {
+    animation: saga-pulse 1s ease-out infinite;
+}
+
+.saga-char-photo {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    filter: grayscale(.5);
+    transition: filter .2s;
+}
+
+body.light-mode .saga-char-photo {
+    filter: grayscale(.4);
+}
+
+.saga-char-photo-wrap:hover .saga-char-photo {
+    filter: grayscale(0) !important;
+}
+
+.saga-char-badges {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.saga-badge {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    position: relative;
+    background: linear-gradient(135deg, var(--saga-accent1-dark), var(--saga-accent2-dark));
+    color: var(--saga-meta-text-dark);
+}
+
+body.light-mode .saga-badge {
+    background: linear-gradient(135deg, var(--saga-accent1-light), var(--saga-accent2-light));
+    color: var(--saga-meta-text-light);
+}
+
+.saga-badge::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    opacity: 0;
+    background: var(--saga-accent1-dark);
+}
+
+body.light-mode .saga-badge::after {
+    background: var(--saga-accent1-light);
+}
+
+.saga-badge:hover::after {
+    animation: saga-pulse 1s ease-out infinite;
+}
+
+.saga-char-bio {
+    display: block;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: justify;
+    color: var(--saga-text2-dark);
+}
+
+body.light-mode .saga-char-bio {
+    color: var(--saga-text2-light);
+}
+
+
+/* ======== CAPITULOS ======== */
+
+.saga-chapters {
+    padding: 6px 30px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.saga-chap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: background .15s;
+    border: 1px solid var(--saga-border-dark);
+    color: var(--saga-text-dark);
+}
+
+body.light-mode .saga-chap {
+    border-color: var(--saga-border-light);
+    color: var(--saga-text-light);
+}
+
+.saga-chap:hover {
+    background: var(--saga-surface-dark);
+}
+
+body.light-mode .saga-chap:hover {
+    background: var(--saga-surface-light);
+}
+
+.saga-chap-icon {
+    display: inline-flex;
+    transition: color .15s;
+}
+
+.saga-chap.open .saga-chap-icon {
+    color: var(--saga-accent1-dark);
+}
+
+body.light-mode .saga-chap.open .saga-chap-icon {
+    color: var(--saga-accent1-light);
+}
+
+.saga-chap.closed .saga-chap-icon {
+    color: var(--saga-accent2-dark);
+}
+
+body.light-mode .saga-chap.closed .saga-chap-icon {
+    color: var(--saga-accent2-light);
+}
+
+.saga-chap.open:hover .saga-chap-icon {
+    color: var(--saga-open-hover-dark);
+    animation: saga-chap-pulse .8s ease-out infinite;
+}
+
+body.light-mode .saga-chap.open:hover .saga-chap-icon {
+    color: var(--saga-open-hover-light);
+}
+
+.saga-chap.closed:hover .saga-chap-icon {
+    color: var(--saga-closed-hover-dark);
+    animation: saga-chap-pulse .8s ease-out infinite;
+}
+
+body.light-mode .saga-chap.closed:hover .saga-chap-icon {
+    color: var(--saga-closed-hover-light);
+}
+
+.saga-chap-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    opacity: .7;
+}
+
+.saga-chap-title {
+    flex: 1;
+}
+
+
+/* ======== CREDITOS ======== */
+
+.saga-foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .5px;
+    border-top: 1px solid var(--saga-foot-border-dark);
+}
+
+body.light-mode .saga-foot {
+    border-color: var(--saga-foot-border-light);
+}
+
+.saga-foot-phrase {
+    text-transform: lowercase;
+    color: var(--saga-foot-phrase-dark);
+}
+
+body.light-mode .saga-foot-phrase {
+    color: var(--saga-foot-phrase-light);
+}
+
+.saga-foot a {
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: var(--saga-foot-link-dark);
+}
+
+body.light-mode .saga-foot a {
+    color: var(--saga-foot-link-light);
+}
+
+
+/* ======== ANIMACIONES ======== */
+
+@keyframes saga-pulse {
+    0%   { opacity: .5; transform: scale(1); }
+    100% { opacity: 0;  transform: scale(1.45); }
+}
+
+@keyframes saga-chap-pulse {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.25); }
+    100% { transform: scale(1); }
+}
+
+@keyframes saga-title-pulse {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
