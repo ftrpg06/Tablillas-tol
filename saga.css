@@ -435,10 +435,20 @@ body.light-mode .saga-chap.closed:hover .saga-chap-icon {
     font-family: 'JetBrains Mono', monospace;
     font-size: 11px;
     opacity: .7;
+    color: var(--saga-text-dark);
+}
+
+body.light-mode .saga-chap-num {
+    color: var(--saga-text-light);
 }
 
 .saga-chap-title {
     flex: 1;
+    color: var(--saga-text-dark);
+}
+
+body.light-mode .saga-chap-title {
+    color: var(--saga-text-light);
 }
 
 
