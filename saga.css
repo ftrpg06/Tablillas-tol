@@ -2,7 +2,7 @@
 /* ======== FUENTES ======== */
 
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single&family=Space+Grotesk:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@400;700&display=swap');
 
 /* ======== GENERAL ======== */
 
@@ -105,7 +105,7 @@ body.light-mode .saga-icon {
 
 .saga-title {
     display: inline-block;
-    font-family: 'Bitcount Grid Single', sans-serif;
+    font-family: "Stardos Stencil", system-ui;
     font-size: 56px !important;
     font-weight: 400;
     letter-spacing: 1px;
