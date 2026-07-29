@@ -111,7 +111,7 @@ body.light-mode .saga-icon {
     letter-spacing: 1px;
     text-transform: uppercase;
     line-height: 1;
-    margin: 28px 0 -40px !important;
+    margin: 18px 0 -40px !important;
     transition: transform .15s;
     color: var(--saga-title-dark);
 }
