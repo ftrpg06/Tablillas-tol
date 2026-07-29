@@ -125,7 +125,7 @@ body.light-mode .sagapost-photo {
 }
 
 .sagapost-title {
-    font-family: 'Bitcount Grid Single', sans-serif;
+    font-family: "Stardos Stencil", system-ui;
     font-size: 30px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -172,7 +172,7 @@ body.light-mode .sagapost-meta-tag {
 
 .sagapost-body {
     padding: 0 36px 26px;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Space Grotesk', sans-serif !important;
     font-size: 12.5px;
     line-height: 1.75;
     letter-spacing: .1px;
