@@ -125,7 +125,7 @@ body.light-mode .sagapost-photo {
 }
 
 .sagapost-title {
-    font-family: "Stardos Stencil", system-ui;
+    font-family: "JetBrains Mono", monospace;
     font-size: 30px;
     font-weight: 400;
     letter-spacing: 1px;
