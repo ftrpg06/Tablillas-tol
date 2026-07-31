@@ -105,8 +105,8 @@ body.light-mode .saga-icon {
 
 .saga-title {
     display: inline-block;
-    font-family: "Stardos Stencil", system-ui;
-    font-size: 56px !important;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 30px !important;
     font-weight: 400;
     letter-spacing: 1px;
     text-transform: uppercase;
