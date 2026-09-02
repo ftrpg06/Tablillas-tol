@@ -1,0 +1,373 @@
+/* TABLILLA LSE303 */
+lse303 * {
+	box-sizing: border-box;
+}
+
+/* INICIAL */
+lse303 {
+	display: block;
+	width: 100%;
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 0 56px 26px;
+	font-family: var(--lse303-font);
+	color: var(--lse303-text);
+	background: var(--lse303-bg);
+	transition: color .4s ease, background .4s ease;
+}
+
+lse303 titulo,
+lse303 name,
+lse303 ctitle {
+	font-family: var(--lse303-deco);
+	font-style: italic;
+	font-weight: 500;
+}
+
+/* CABECERA */
+.lse303-top {
+	position: relative;
+	min-height: 280px;
+	margin: 0 -56px;
+	padding: 80px 56px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	overflow: hidden;
+	box-shadow: inset 0 -1px 0 0 var(--lse303-line);
+}
+
+.lse303-top-pattern {
+	position: absolute;
+	inset: 0;
+	background-image: repeating-linear-gradient(115deg, var(--lse303-color) 0 1px, transparent 1px 34px);
+	opacity: .09;
+	mask-image: radial-gradient(ellipse 60% 75% at 50% 45%, #000 25%, transparent 85%);
+	-webkit-mask-image: radial-gradient(ellipse 60% 75% at 50% 45%, #000 25%, transparent 85%);
+}
+
+.lse303-top-inner {
+	position: relative;
+	z-index: 1;
+}
+
+.lse303-top subt {
+	display: block;
+	font-size: 9px;
+	letter-spacing: 4px;
+	color: var(--lse303-muted);
+	margin-bottom: 16px;
+}
+
+.lse303-top titulo {
+	display: block;
+	font-size: 44px;
+	line-height: 1.15;
+	color: var(--lse303-text);
+}
+
+.lse303-top sub {
+	display: block;
+	margin-top: 12px;
+	font-size: 11px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: var(--lse303-color);
+	font-family: var(--lse303-font);
+	font-style: normal;
+}
+
+/* CLASIFICACION */
+.lse303-classif {
+	display: flex;
+	justify-content: center;
+	gap: 12px;
+	margin-top: 22px;
+	font-size: 8px;
+	letter-spacing: 2px;
+	color: var(--lse303-muted);
+}
+
+.lse303-classif span:not(:last-child):after {
+	content: "";
+	display: inline-block;
+	width: 3px;
+	height: 3px;
+	margin-left: 12px;
+	background: var(--lse303-color);
+	vertical-align: middle;
+	border-radius: 50%;
+}
+
+/* RESUMEN */
+.lse303-synopsis {
+	margin: 0 -56px;
+	padding: 44px 56px;
+	box-shadow: inset 0 -1px 0 0 var(--lse303-line);
+}
+
+.lse303-synopsis-head {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 22px;
+}
+
+.lse303-constella {
+	width: 44px;
+	height: 26px;
+	color: var(--lse303-color);
+}
+
+.lse303-constella circle {
+	fill: var(--lse303-color);
+}
+
+.lse303-synopsis-head span,
+.lse303-chronicle-head span {
+	font-size: 10px;
+	letter-spacing: 4px;
+	color: var(--lse303-color);
+}
+
+.lse303-synopsis-text {
+	font-size: 12.5px;
+	line-height: 1.8;
+	text-align: justify;
+	color: var(--lse303-muted-strong);
+}
+
+.lse303-synopsis-text b {
+	color: var(--lse303-color);
+	font-weight: 500;
+}
+
+.lse303-synopsis-text i {
+	color: var(--lse303-color);
+}
+
+.lse303-synopsis-text u {
+	text-decoration-color: var(--lse303-color);
+}
+
+.lse303-synopsis-text s {
+	color: var(--lse303-muted);
+}
+
+/* PERSONAJES */
+.lse303-souls {
+	margin: 0 -56px;
+	padding: 46px 56px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 40px;
+	box-shadow: inset 0 -1px 0 0 var(--lse303-line);
+}
+
+.lse303-souls-line {
+	width: 1px;
+	align-self: stretch;
+	background: linear-gradient(to bottom, transparent, var(--lse303-color) 30%, var(--lse303-color) 70%, transparent);
+	opacity: .4;
+}
+
+.lse303-soul {
+	flex: 1;
+	max-width: 220px;
+	text-align: center;
+}
+
+.lse303-portrait-wrap {
+	position: relative;
+	width: 140px;
+	height: 140px;
+	margin: 0 auto 18px;
+}
+
+.lse303-portrait-ring {
+	position: absolute;
+	inset: 0;
+	border-radius: 50%;
+	padding: 3px;
+	background: conic-gradient(from 0deg, transparent 0%, var(--lse303-color) 45%, transparent 65%);
+	-webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	animation: lse303-spin 7s linear infinite;
+}
+
+@keyframes lse303-spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.lse303-portrait {
+	position: absolute;
+	inset: 3px;
+	border-radius: 50%;
+	overflow: hidden;
+	background: var(--lse303-panel);
+}
+
+.lse303-portrait img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: grayscale(100%);
+	opacity: .85;
+	transition: filter .4s ease, opacity .4s ease;
+}
+
+.lse303-soul:hover .lse303-portrait img {
+	filter: grayscale(0%);
+	opacity: 1;
+}
+
+.lse303-soul name {
+	display: block;
+	font-size: 22px;
+	margin-bottom: 8px;
+}
+
+.lse303-soul-meta {
+	font-size: 9px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: var(--lse303-muted);
+}
+
+.lse303-soul-meta span:not(:last-child):after {
+	content: "•";
+	margin: 0 7px;
+	color: var(--lse303-color);
+	font-weight: 700;
+	font-size: 10px;
+}
+
+/* CAPITULOS */
+.lse303-chronicle {
+	padding: 44px 0 0;
+}
+
+.lse303-chronicle-head {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 32px;
+}
+
+.lse303-chronicle-orn {
+	width: 26px;
+	height: 1px;
+	background: var(--lse303-line-strong);
+	position: relative;
+}
+
+.lse303-chronicle-orn:after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 4px;
+	height: 4px;
+	transform: translate(-50%, -50%) rotate(45deg);
+	background: var(--lse303-color);
+}
+
+.lse303-chapters {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+}
+
+.lse303-chapter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 6px;
+	padding: 16px 8px 14px;
+	border: 1px solid var(--lse303-line);
+	text-decoration: none;
+	color: var(--lse303-muted);
+	position: relative;
+	transition: border-color .25s ease, color .25s ease, transform .25s ease, background .25s ease;
+}
+
+.lse303-chapter:hover {
+	transform: translateY(-3px);
+	border-color: var(--lse303-color);
+	background: var(--lse303-hover-wash);
+}
+
+.lse303-chapter-num {
+	width: 26px;
+	height: 26px;
+	border-radius: 50%;
+	border: 1px solid var(--lse303-line-strong);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 10px;
+	color: var(--lse303-muted);
+	font-family: var(--lse303-font);
+	transition: border-color .25s ease;
+}
+
+.lse303-chapter.is-open .lse303-chapter-num {
+	border-color: var(--lse303-color);
+	color: var(--lse303-color);
+}
+
+.lse303-chapter:hover .lse303-chapter-num {
+	border-color: var(--lse303-color);
+}
+
+.lse303-chapter ctitle {
+	font-size: 11.5px;
+}
+
+.lse303-chapter.is-open {
+	color: var(--lse303-text);
+}
+
+.lse303-dot {
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	border: 1px solid var(--lse303-muted);
+	margin-top: 1px;
+}
+
+.lse303-chapter.is-open .lse303-dot {
+	background: var(--lse303-color);
+	border-color: var(--lse303-color);
+}
+
+/* CREDITOS */
+.lse303-credits {
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 40px;
+	font-size: 7px;
+	letter-spacing: 3px;
+}
+
+.lse303-credits a {
+	color: var(--lse303-muted);
+	text-decoration: none;
+	opacity: .3;
+	transition: opacity .3s ease;
+}
+
+.lse303-credits a:hover {
+	opacity: .75;
+}
+
+
