@@ -62,7 +62,7 @@
 
 .lastwl-nombre {
   font-family             : "Lobster", sans-serif;
-  font-size               : 62px;
+  font-size               : 100px;
   letter-spacing          : 0px;
   background              : linear-gradient(135deg, var(--lc1), var(--lc2));
   -webkit-background-clip : text;
@@ -150,9 +150,8 @@
 
 .lastwl-sec-nom {
   font-family             : "Lobster", sans-serif;
-  font-size               : 22px;
+  font-size               : 25px;
   letter-spacing          : 0px;
-  text-transform          : uppercase;
   background              : linear-gradient(90deg, var(--lc1), var(--lc2));
   -webkit-background-clip : text;
   -webkit-text-fill-color : transparent;
@@ -584,7 +583,7 @@
 
 .lastwl-pers-nombre {
   font-family             : "Lobster", sans-serif;
-  font-size               : 22px;
+  font-size               : 25px;
   letter-spacing          : 0px;
   background              : linear-gradient(90deg, var(--lc1), var(--lc2));
   -webkit-background-clip : text;
