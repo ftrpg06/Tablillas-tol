@@ -163,6 +163,12 @@
   gap                     : 12px;
 }
 
+.lastwl-sec-nom span {
+  background              : linear-gradient(90deg, var(--lc1), var(--lc2));
+  -webkit-background-clip : text;
+  -webkit-text-fill-color : transparent;
+}
+
 .lastwl-sec-nom::before,
 .lastwl-sec-nom::after { content: ''; flex: 1; height: 1px; max-width: 80px; }
 .lastwl-sec-nom::before { background: linear-gradient(90deg, transparent, var(--lc1)); }
