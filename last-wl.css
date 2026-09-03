@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Iceberg&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap');
 
 /* ════════════════════════════════
-   CONTENEDOR
+   CONTENIDO
    ════════════════════════════════ */
 .lastwl {
   width         : 700px;
@@ -202,6 +202,9 @@
   border-bottom   : 1px solid var(--lastwl-bd);
 }
 
+/* Radio inputs ocultos — controlan las pestañas sin JS */
+.lastwl-radio { display: none; }
+
 .lastwl-tb {
   padding        : 11px 34px;
   font-family    : 'DM Mono', monospace;
@@ -217,6 +220,7 @@
   transition     : all .2s;
   position       : relative;
   overflow       : hidden;
+  display        : inline-block;
 }
 
 .lastwl-tb::before {
@@ -229,7 +233,14 @@
   transition : opacity .2s;
 }
 
-.lastwl-tb.open {
+.lastwl-tb:hover::before { opacity: .4; }
+.lastwl-tb:hover         { color: var(--lastwl-text2); }
+
+/* Pestaña activa según radio checked */
+#lastwl-tab-a:checked ~ .lastwl-tabs label[for="lastwl-tab-a"],
+#lastwl-tab-b:checked ~ .lastwl-tabs label[for="lastwl-tab-b"],
+#lastwl-tab-c:checked ~ .lastwl-tabs label[for="lastwl-tab-c"],
+#lastwl-tab-d:checked ~ .lastwl-tabs label[for="lastwl-tab-d"] {
   background          : var(--lastwl-bg);
   color               : var(--lastwl-text);
   border-color        : var(--lastwl-bd);
@@ -238,12 +249,20 @@
   top                 : 1px;
 }
 
-.lastwl-tb.open::before  { opacity: 1; }
-.lastwl-tb:hover::before { opacity: .4; }
+#lastwl-tab-a:checked ~ .lastwl-tabs label[for="lastwl-tab-a"]::before,
+#lastwl-tab-b:checked ~ .lastwl-tabs label[for="lastwl-tab-b"]::before,
+#lastwl-tab-c:checked ~ .lastwl-tabs label[for="lastwl-tab-c"]::before,
+#lastwl-tab-d:checked ~ .lastwl-tabs label[for="lastwl-tab-d"]::before { opacity: 1; }
 
+/* Paneles — todos ocultos por defecto */
 .lastwl-pnl       { display: none; }
-.lastwl-pnl.open  { display: block; }
 .lastwl-pnl-inner { padding: 22px 0 4px; }
+
+/* Panel visible según radio checked */
+#lastwl-tab-a:checked ~ #lastwl-a,
+#lastwl-tab-b:checked ~ #lastwl-b,
+#lastwl-tab-c:checked ~ #lastwl-c,
+#lastwl-tab-d:checked ~ #lastwl-d { display: block; }
 
 /* ════════════════════════════════
    GUSTOS
