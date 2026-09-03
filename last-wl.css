@@ -202,7 +202,7 @@
   border-bottom   : 1px solid var(--lastwl-bd);
 }
 
-/* Radio inputs ocultos — controlan las pestañas sin JS */
+/* Radio inputs ocultos */
 .lastwl-radio { display: none; }
 
 .lastwl-tb {
@@ -237,10 +237,10 @@
 .lastwl-tb:hover         { color: var(--lastwl-text2); }
 
 /* Pestaña activa según radio checked */
-#lastwl-tab-a:checked ~ .lastwl-tabs label[for="lastwl-tab-a"],
-#lastwl-tab-b:checked ~ .lastwl-tabs label[for="lastwl-tab-b"],
-#lastwl-tab-c:checked ~ .lastwl-tabs label[for="lastwl-tab-c"],
-#lastwl-tab-d:checked ~ .lastwl-tabs label[for="lastwl-tab-d"] {
+#lastwl-tab-a:checked ~ .lastwl-tabs .lastwl-tb:nth-child(1),
+#lastwl-tab-b:checked ~ .lastwl-tabs .lastwl-tb:nth-child(2),
+#lastwl-tab-c:checked ~ .lastwl-tabs .lastwl-tb:nth-child(3),
+#lastwl-tab-d:checked ~ .lastwl-tabs .lastwl-tb:nth-child(4) {
   background          : var(--lastwl-bg);
   color               : var(--lastwl-text);
   border-color        : var(--lastwl-bd);
@@ -249,20 +249,20 @@
   top                 : 1px;
 }
 
-#lastwl-tab-a:checked ~ .lastwl-tabs label[for="lastwl-tab-a"]::before,
-#lastwl-tab-b:checked ~ .lastwl-tabs label[for="lastwl-tab-b"]::before,
-#lastwl-tab-c:checked ~ .lastwl-tabs label[for="lastwl-tab-c"]::before,
-#lastwl-tab-d:checked ~ .lastwl-tabs label[for="lastwl-tab-d"]::before { opacity: 1; }
+#lastwl-tab-a:checked ~ .lastwl-tabs .lastwl-tb:nth-child(1)::before,
+#lastwl-tab-b:checked ~ .lastwl-tabs .lastwl-tb:nth-child(2)::before,
+#lastwl-tab-c:checked ~ .lastwl-tabs .lastwl-tb:nth-child(3)::before,
+#lastwl-tab-d:checked ~ .lastwl-tabs .lastwl-tb:nth-child(4)::before { opacity: 1; }
 
-/* Paneles — todos ocultos por defecto */
+/* Paneles */
 .lastwl-pnl       { display: none; }
 .lastwl-pnl-inner { padding: 22px 0 4px; }
 
 /* Panel visible según radio checked */
-#lastwl-tab-a:checked ~ #lastwl-a,
-#lastwl-tab-b:checked ~ #lastwl-b,
-#lastwl-tab-c:checked ~ #lastwl-c,
-#lastwl-tab-d:checked ~ #lastwl-d { display: block; }
+#lastwl-tab-a:checked ~ .lastwl-tabs ~ #lastwl-a,
+#lastwl-tab-b:checked ~ .lastwl-tabs ~ #lastwl-b,
+#lastwl-tab-c:checked ~ .lastwl-tabs ~ #lastwl-c,
+#lastwl-tab-d:checked ~ .lastwl-tabs ~ #lastwl-d { display: block; }
 
 /* ════════════════════════════════
    GUSTOS
