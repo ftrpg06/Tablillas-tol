@@ -61,9 +61,9 @@
 }
 
 .lastwl-nombre {
-  font-family             : 'Iceberg', sans-serif;
+  font-family             : "Lobster", sans-serif;
   font-size               : 62px;
-  letter-spacing          : 8px;
+  letter-spacing          : 0px;
   background              : linear-gradient(135deg, var(--lc1), var(--lc2));
   -webkit-background-clip : text;
   -webkit-text-fill-color : transparent;
@@ -149,9 +149,9 @@
 .lastwl-sobre { padding: 28px 32px; }
 
 .lastwl-sec-nom {
-  font-family             : "Stardos Stencil", system-ui;
+  font-family             : "Lobster", sans-serif;
   font-size               : 22px;
-  letter-spacing          : 6px;
+  letter-spacing          : 0px;
   text-transform          : uppercase;
   background              : linear-gradient(90deg, var(--lc1), var(--lc2));
   -webkit-background-clip : text;
@@ -585,7 +585,7 @@
 .lastwl-pers-nombre {
   font-family             : "Lobster", sans-serif;
   font-size               : 22px;
-  letter-spacing          : 4px;
+  letter-spacing          : 0px;
   background              : linear-gradient(90deg, var(--lc1), var(--lc2));
   -webkit-background-clip : text;
   -webkit-text-fill-color : transparent;
