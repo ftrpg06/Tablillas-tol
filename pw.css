@@ -1,0 +1,300 @@
+/* PW RESUMEN */
+pw{
+  display:block;
+  position:relative;
+  isolation:isolate;
+  width:600px;
+  max-width:100%;
+  margin:0 auto;
+  background:var(--pw-bg);
+  border:1px solid var(--pw-border);
+  outline:1px solid var(--pw-border);
+  outline-offset:6px;
+  color:var(--pw-text);
+  font-family:'Jost',sans-serif;
+  font-weight:300;
+  line-height:1.6;
+}
+
+/* FONDO */
+pw::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background-image:var(--pw-fondo-img);
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  opacity:var(--pw-fondo-opacidad);
+}
+
+/* CABECERA */
+pw .pw-cab{
+  padding:40px 40px 24px;
+  text-align:center;
+}
+pw .pw-icono{
+  width:var(--pw-icono-w);
+  height:var(--pw-icono-h);
+  margin:0 auto 8px;
+  background-color:var(--pw-icono-color);
+  -webkit-mask-image:var(--pw-icono-img);
+  mask-image:var(--pw-icono-img);
+  -webkit-mask-repeat:no-repeat;
+  mask-repeat:no-repeat;
+  -webkit-mask-position:center;
+  mask-position:center;
+  -webkit-mask-size:contain;
+  mask-size:contain;
+}
+pw .pw-titulo{
+  position:relative;
+  display:inline-block;
+  font-family:'UnifrakturMaguntia',cursive;
+  font-size:46px;
+  line-height:1;
+  color:var(--pw-text);
+  margin:0;
+}
+pw .pw-titulo::before{
+  content:attr(data-txt);
+  position:absolute;
+  left:2px;
+  top:2px;
+  color:transparent;
+  -webkit-text-stroke:1px var(--pw-accent);
+  text-stroke:1px var(--pw-accent);
+  pointer-events:none;
+}
+pw .pw-sub{
+  margin-top:14px;
+  font-family:'Jost',sans-serif;
+  font-weight:400;
+  font-size:10px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--pw-muted);
+}
+
+/* DATOS */
+pw .pw-datos{
+  margin-top:24px;
+  padding-top:18px;
+  border-top:1px solid var(--pw-border);
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:9px;
+  font-size:10px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--pw-muted);
+}
+pw .pw-datos i{
+  font-style:normal;
+  color:var(--pw-border);
+}
+pw .pw-datos b{
+  font-weight:500;
+  color:var(--pw-muted);
+}
+
+/* SEPARADORES */
+pw .pw-div{
+  height:1px;
+  margin:0 40px;
+  background:var(--pw-border);
+}
+
+/* SECCIONES */
+pw .pw-sec{
+  padding:30px 40px;
+}
+
+/* SINOPSIS */
+pw .pw-sinopsis{
+  font-family:'Spectral',serif;
+  font-weight:400;
+  font-size:15px;
+  text-align:justify;
+  color:var(--pw-text);
+}
+pw .pw-inicial{
+  position:relative;
+  display:inline-block;
+  float:left;
+  margin:6px 10px 0 0;
+  font-family:'UnifrakturMaguntia',cursive;
+  font-size:2.6em;
+  line-height:.7;
+  color:var(--pw-text);
+}
+pw .pw-inicial::before{
+  content:attr(data-txt);
+  position:absolute;
+  left:1px;
+  top:1px;
+  color:transparent;
+  -webkit-text-stroke:.6px var(--pw-accent);
+  text-stroke:.6px var(--pw-accent);
+  pointer-events:none;
+}
+pw .pw-sinopsis strong{
+  font-family:'Jost',sans-serif;
+  font-weight:700;
+  background:linear-gradient(90deg, var(--pw-accent), var(--pw-accent-2));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+pw .pw-sinopsis em{
+  font-family:'Jost',sans-serif;
+  font-style:italic;
+  font-weight:400;
+  color:var(--pw-accent);
+  letter-spacing:.01em;
+}
+pw .pw-sinopsis u{
+  text-decoration:underline;
+  text-decoration-color:var(--pw-accent);
+  text-underline-offset:3px;
+}
+pw .pw-sinopsis strike,
+pw .pw-sinopsis del{
+  color:var(--pw-muted);
+  text-decoration-color:var(--pw-muted);
+}
+
+/* PERSONAJES */
+pw .pw-fichas{
+  position:relative;
+  height:320px;
+  margin:0 -40px;
+  display:flex;
+  background:var(--pw-panel);
+}
+pw .pw-fic{
+  position:relative;
+  flex:1 1 50%;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:auto, auto, cover, auto;
+  background-blend-mode:normal, color, normal, normal;
+  filter:grayscale(1) contrast(1.08) brightness(.96);
+}
+pw .pw-fic.pw-l{
+  border-right:1px solid var(--pw-border);
+  background-image:
+    linear-gradient(180deg, transparent 42%, var(--pw-scrim) 100%),
+    linear-gradient(var(--pw-accent), var(--pw-accent)),
+    var(--pw-foto-1),
+    radial-gradient(130% 100% at 25% 10%, var(--pw-panel-alt), var(--pw-panel) 75%);
+}
+pw .pw-fic.pw-r{
+  background-image:
+    linear-gradient(180deg, transparent 42%, var(--pw-scrim) 100%),
+    linear-gradient(var(--pw-accent), var(--pw-accent)),
+    var(--pw-foto-2),
+    radial-gradient(130% 100% at 75% 10%, var(--pw-panel-alt), var(--pw-panel) 75%);
+}
+pw .pw-info{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:24px;
+  z-index:2;
+  text-align:center;
+  padding:0 16px;
+}
+pw .pw-nombre{
+  position:relative;
+  display:inline-block;
+  white-space:nowrap;
+  font-family:'UnifrakturMaguntia',cursive;
+  font-size:25px;
+  color:var(--pw-overlay-text);
+  line-height:1.1;
+}
+pw .pw-nombre::before{
+  content:attr(data-txt);
+  position:absolute;
+  left:1px;
+  top:1px;
+  color:transparent;
+  -webkit-text-stroke:.9px var(--pw-accent);
+  text-stroke:.9px var(--pw-accent);
+  pointer-events:none;
+}
+pw .pw-fdatos{
+  margin-top:7px;
+  font-size:10px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--pw-overlay-muted);
+}
+pw .pw-fdatos i{
+  font-style:normal;
+  color:var(--pw-overlay-muted);
+  margin:0 5px;
+}
+
+/* CAPÍTULOS */
+pw .pw-caps{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+}
+pw .pw-cap{
+  font-family:'UnifrakturMaguntia',cursive;
+  font-size:19px;
+  color:var(--pw-text);
+  text-decoration:none;
+  transition:color .2s ease;
+}
+pw .pw-cap:hover{
+  color:var(--pw-accent);
+}
+pw .pw-cap:focus-visible{
+  outline:2px solid var(--pw-accent);
+  outline-offset:2px;
+}
+pw .pw-capsep{
+  color:var(--pw-accent);
+  font-size:14px;
+  opacity:.7;
+}
+
+/* FOOTER */
+pw .pw-foot{
+  padding:20px 40px;
+  text-align:center;
+}
+pw .pw-foot a{
+  font-size:8px;
+  letter-spacing:.6em;
+  text-transform:uppercase;
+  color:var(--pw-muted);
+  text-decoration:none;
+  opacity:.55;
+  transition:opacity .2s ease, color .2s ease;
+}
+pw .pw-foot a:hover{
+  opacity:1;
+  color:var(--pw-accent);
+}
+pw .pw-foot a:focus-visible{
+  outline:2px solid var(--pw-accent);
+  outline-offset:2px;
+}
+
+/* ACCESIBILIDAD */
+@media (prefers-reduced-motion: reduce){
+  pw .pw-cap,
+  pw .pw-foot a{
+    transition:none;
+  }
+}
