@@ -106,9 +106,9 @@
     left: 0.1px;
     top: 0.1px;
     color: transparent;
-    -webkit-text-stroke: 1px var(--mbrd-accent-2);
+    -webkit-text-stroke: 0.5px var(--mbrd-accent-2);
     z-index: 1.5;
-    opacity: .35;
+    opacity: 0.25;
 }
 
 .mbrd-w1 { font-size: 23px; }
