@@ -103,11 +103,11 @@
 
 .mbrd-phrase-stroke {
     position: absolute;
-    left: 0.1px;
-    top: 0.1px;
+    left: 0px;
+    top: 0px;
     color: transparent;
     -webkit-text-stroke: 1px var(--mbrd-accent-2);
-    z-index: 0.5;
+    z-index: 2;
     opacity: .25;
 }
 
