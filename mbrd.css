@@ -108,7 +108,7 @@
     color: transparent;
     -webkit-text-stroke: 1px var(--mbrd-accent-2);
     z-index: 0.5;
-    opacity: .35;
+    opacity: .25;
 }
 
 .mbrd-w1 { font-size: 23px; }
