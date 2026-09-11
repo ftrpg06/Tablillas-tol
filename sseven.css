@@ -55,15 +55,37 @@ sseven *{
   margin:0 0 -8px;
 }
 
+.sseven-title-wrap{
+  position:relative;
+  display:inline-block;
+  white-space:nowrap;
+}
+
 .sseven-title{
+  position:relative;
+  z-index:1;
   margin:0;
-  font-family:'UnifrakturMaguntia',cursive;
-  font-size:44px;
+  font-family:'Damion',cursive;
+  font-size:40px;
   letter-spacing:.02em;
-  line-height:1.15;
+  line-height:1;
   color:var(--sseven-text);
-  -webkit-text-stroke:.6px var(--accseven);
-  text-shadow:.5px 0 0 var(--accseven);
+}
+
+.sseven-title-ghost{
+  display:block;
+  position:absolute;
+  top:4px;
+  left:0;
+  right:0;
+  font-family:'Damion',cursive;
+  font-size:40px;
+  letter-spacing:.02em;
+  line-height:1;
+  color:transparent;
+  -webkit-text-stroke:1px var(--accseven);
+  pointer-events:none;
+  user-select:none;
 }
 
 .sseven-tagline{
@@ -246,9 +268,9 @@ sseven *{
 }
 
 .sseven-card-name{
-  position:center;
+  position:relative;
   margin:0 0 2px;
-  font-family:'UnifrakturMaguntia',cursive;
+  font-family:'Damion',cursive;
   font-size:17px;
   line-height:1;
   color:var(--accseven);
@@ -256,7 +278,7 @@ sseven *{
 }
 
 .sseven-card-name i{
-  position:center;
+  position:absolute;
   left:50%;
   top:50%;
   transform:translate(-50%,-50%);
