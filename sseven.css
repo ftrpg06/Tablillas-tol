@@ -55,36 +55,15 @@ sseven *{
   margin:0 0 -8px;
 }
 
-.sseven-title-wrap{
-  position:relative;
-  display:inline-block;
-}
-
-.sseven-title-ghost{
-  display:block;
-  position:absolute;
-  top:4px;
-  left:0;
-  right:0;
-  font-family:'Damion',cursive;
-  font-size:44px;
-  letter-spacing:.02em;
-  line-height:1;
-  color:transparent;
-  -webkit-text-stroke:1px var(--accseven);
-  pointer-events:none;
-  user-select:none;
-}
-
 .sseven-title{
-  position:relative;
-  z-index:1;
   margin:0;
   font-family:'Damion',cursive;
   font-size:44px;
   letter-spacing:.02em;
-  line-height:1;
+  line-height:1.15;
   color:var(--sseven-text);
+  -webkit-text-stroke:.6px var(--accseven);
+  text-shadow:.5px 0 0 var(--accseven);
 }
 
 .sseven-tagline{
@@ -272,7 +251,7 @@ sseven *{
   font-family:'Damion',cursive;
   font-size:17px;
   line-height:1;
-  color:var(--cc,var(--accseven));
+  color:var(--accseven);
   font-weight:400;
 }
 
@@ -284,7 +263,7 @@ sseven *{
   font-size:32px;
   opacity:.15;
   z-index:-1;
-  color:var(--cc,var(--accseven));
+  color:var(--accseven);
 }
 
 .sseven-card-data{
