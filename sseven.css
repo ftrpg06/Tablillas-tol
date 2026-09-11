@@ -57,7 +57,7 @@ sseven *{
 
 .sseven-title{
   margin:0;
-  font-family:'Damion',cursive;
+  font-family:'UnifrakturMaguntia',cursive;
   font-size:44px;
   letter-spacing:.02em;
   line-height:1.15;
@@ -246,9 +246,9 @@ sseven *{
 }
 
 .sseven-card-name{
-  position:relative;
+  position:center;
   margin:0 0 2px;
-  font-family:'Damion',cursive;
+  font-family:'UnifrakturMaguntia',cursive;
   font-size:17px;
   line-height:1;
   color:var(--accseven);
@@ -256,7 +256,7 @@ sseven *{
 }
 
 .sseven-card-name i{
-  position:absolute;
+  position:center;
   left:50%;
   top:50%;
   transform:translate(-50%,-50%);
