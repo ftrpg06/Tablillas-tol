@@ -1,5 +1,5 @@
 /* LV999 ANIME - TABLILLA */
-lv999.lv999-wrap {
+lv999 {
   display: block;
   width: 650px;
   max-width: 100%;
@@ -12,12 +12,12 @@ lv999.lv999-wrap {
   box-sizing: border-box;
 }
 
-lv999.lv999-wrap * {
+lv999 * {
   box-sizing: border-box;
 }
 
-lv999.lv999-wrap::before,
-lv999.lv999-wrap::after {
+lv999::before,
+lv999::after {
   content: "";
   display: block;
   height: 4px;
@@ -142,7 +142,7 @@ lv999.lv999-wrap::after {
   padding: 26px 40px 8px;
 }
 
-.lv999-sinopsis p {
+.lv999-linea {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: 1.75;
@@ -179,11 +179,11 @@ lv999.lv999-wrap::after {
 }
 
 /* CAPÍTULOS */
-.lv999-capitulos-wrap {
+.lv999-capitulos {
   padding: 16px 40px 30px;
 }
 
-.lv999-capitulos {
+.lv999-capitulos-lista {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -243,11 +243,11 @@ lv999.lv999-wrap::after {
 }
 
 /* PERSONAJES */
-.lv999-personajes-wrap {
+.lv999-personajes {
   padding: 4px 40px 30px;
 }
 
-.lv999-personajes {
+.lv999-personajes-lista {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
@@ -368,7 +368,7 @@ lv999.lv999-wrap::after {
   flex-shrink: 0;
 }
 
-/* CREDITOS */
+/* FOOTER */
 .lv999-footer {
   padding: 18px 40px 22px;
   border-top: 1px solid var(--lv999-border);
@@ -386,7 +386,7 @@ lv999.lv999-wrap::after {
   font-size: 8px;
   text-transform: uppercase;
   letter-spacing: 10px;
-  color: var(--lv999-text-dim);
+  color: var(--lv999-text-dim) !important;
   opacity: .6;
   text-decoration: none;
   transition: opacity .3s, color .3s;
