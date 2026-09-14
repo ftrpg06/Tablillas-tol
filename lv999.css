@@ -324,7 +324,7 @@ lv999::after {
   font-family: "Londrina Sketch", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 30px;
   letter-spacing: .5px;
   line-height: 1.15;
   background-image: var(--lv999-grad-text);
