@@ -127,7 +127,7 @@ lv999::after {
 
 /* ETIQUETAS DE SECCIÓN */
 .lv999-section-label {
-  font-family: 'Baloo 2', cursive;
+  font-family: "Londrina Sketch", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 13px;
@@ -206,7 +206,7 @@ lv999::after {
 
 .lv999-cap-num {
   display: block;
-  font-family: 'Baloo 2', cursive;
+  font-family: "Londrina Sketch", sans-serif;
   font-weight: 800;
   font-size: 14px;
   color: var(--lv999-text);
