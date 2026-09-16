@@ -201,7 +201,7 @@ lv999p::after {
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--lv999p-text-dim);
+  color: var(--lv999p-text-dim) !important;
   opacity: .6;
   text-decoration: none;
 }
