@@ -1,0 +1,207 @@
+/* LV999P POST DE ROL */
+lv999p {
+  display: block;
+  width: 550px;
+  max-width: 100%;
+  margin: 0 auto;
+  background: var(--lv999p-bg);
+  color: var(--lv999p-text);
+  border: 1px solid var(--lv999p-border);
+  border-radius: 8px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+lv999p * {
+  box-sizing: border-box;
+}
+
+lv999p::before,
+lv999p::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: var(--lv999p-grad-full);
+}
+
+/* CABECERA */
+.lv999p-header {
+  position: relative;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 32px;
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, var(--lv999p-panel) 0%, var(--lv999p-bg) 100%);
+}
+
+.lv999p-header-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -46%) rotate(-6deg);
+  font-family: 'Londrina Sketch', cursive;
+  font-weight: 400;
+  font-size: 170px;
+  color: var(--lv999p-solid);
+  opacity: .06;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  white-space: nowrap;
+}
+
+.lv999p-imagen-marco {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 2px;
+  border-radius: 9px;
+  background-image: var(--lv999p-grad-full);
+  margin: 0 0 16px;
+}
+
+.lv999p-imagen {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 7px;
+  object-fit: cover;
+  background: var(--lv999p-panel);
+  filter: grayscale(1) brightness(.9);
+  transition: filter .35s ease;
+}
+
+.lv999p-imagen-marco:hover .lv999p-imagen {
+  filter: grayscale(0) brightness(1);
+}
+
+.lv999p-eyebrow {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 2px;
+  font-size: 11px;
+  font-style: italic;
+  color: var(--lv999p-text-dim);
+  text-align: center;
+}
+
+.lv999p-title {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-family: 'Londrina Sketch', cursive;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 34px;
+  line-height: 1.1;
+  text-align: center;
+  background-image: var(--lv999p-grad-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.lv999p-genre {
+  position: relative;
+  z-index: 1;
+  margin: -2px 0 0;
+  text-align: center;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--lv999p-text-dim);
+}
+
+/* DATOS */
+.lv999p-datos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 20px;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--lv999p-text-dim);
+  border-top: 1px solid var(--lv999p-border);
+  border-bottom: 1px solid var(--lv999p-border);
+  background: var(--lv999p-panel);
+  flex-wrap: wrap;
+}
+
+.lv999p-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--lv999p-text-dim);
+  display: inline-block;
+}
+
+/* TEXTO */
+.lv999p-texto {
+  padding: 24px 32px 8px;
+}
+
+.lv999p-linea {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.75;
+  text-align: justify;
+  margin: 0 0 14px;
+  color: var(--lv999p-text);
+}
+
+.lv999p-texto strong {
+  background-image: var(--lv999p-grad-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.lv999p-texto em {
+  color: var(--lv999p-solid);
+  font-style: italic;
+}
+
+.lv999p-texto u {
+  text-decoration: underline;
+  text-decoration-color: var(--lv999p-solid-2);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.lv999p-texto s {
+  color: var(--lv999p-text-dim);
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+/* FOOTER */
+.lv999p-footer {
+  padding: 16px 32px 20px;
+  border-top: 1px solid var(--lv999p-border);
+  text-align: center;
+}
+
+.lv999p-footer-frase {
+  margin: 0 0 6px;
+  font-size: 11px;
+  font-style: italic;
+  color: var(--lv999p-text-dim);
+}
+
+.lv999p-footer-credito {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--lv999p-text-dim);
+  opacity: .6;
+  text-decoration: none;
+}
