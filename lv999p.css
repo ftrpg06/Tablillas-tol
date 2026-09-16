@@ -57,7 +57,7 @@ lv999p::after {
 .lv999p-imagen-marco {
   position: relative;
   z-index: 1;
-  width: 200px;
+  width: 45%;
   padding: 2px;
   border-radius: 9px;
   background-image: var(--lv999p-grad-full);
@@ -66,7 +66,7 @@ lv999p::after {
 
 .lv999p-imagen {
   display: block;
-  width: 100%;
+  width: 45%;
   aspect-ratio: 16 / 9;
   border-radius: 7px;
   object-fit: cover;
